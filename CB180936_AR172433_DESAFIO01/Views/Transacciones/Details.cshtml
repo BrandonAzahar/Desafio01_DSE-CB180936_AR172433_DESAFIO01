@@ -1,0 +1,50 @@
+﻿@model CB180936_AR172433_DESAFIO01.Models.Transacciones
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>detalle del registro</h2>
+
+<div>
+    <h4>Transacciones</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Monto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Monto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaTransaccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaTransaccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaAplicacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaAplicacion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

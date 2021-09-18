@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Banco UDB</title>
+    <link href="~/Content/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Scripts/jquery-3.4.1.min.js"  />
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+
+</head>
+
+<body>
+    <div id="Barra_nav" class="navbar navbar-inverse navbar-fixed-top" style="background-color: #3260ff;">
+        <img src="https://ictelecom.es/wp-content/uploads/2018/11/bitcoin-3125488_960_720.png" style="width: 60px; height: 60px;">
+        <div class="container">
+           
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Banco UDB CB180936_AR172433_DESAFIO01", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Transacciones", "index", "Transacciones")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer style="color: blue;">
+            <p>&copy; @DateTime.Now.Year - CB180936_AR172433_DESAFIO01 aplicacion Banco</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
